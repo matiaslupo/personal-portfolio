@@ -25,4 +25,17 @@
     target: '#sideNav'
   });
 
+  let btn= document.getElementById('send-mail');
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    let params= {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+    }
+
+    emailjs.send('service_i57n0rn', 'template_ygdtn8g', params).then(alert("Email Sent!"));
+  });
+
 })(jQuery); // End of use strict

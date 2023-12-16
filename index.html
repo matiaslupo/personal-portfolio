@@ -25,6 +25,14 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+         emailjs.init("TPUeB_iBDAR70_hro");
+      })();
+   </script>
+
   </head>
 
   <body id="page-top">
@@ -296,12 +304,12 @@
         <div class="my-auto">
           <h2 class="mb-5">Contact Me</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form>
               <input type="text" id="name" placeholder="Your name" autocomplete="off" required>
               <input type="email" id="email" placeholder="Email" autocomplete="off" required>
               <input type="text" id="subject" placeholder="Subject" autocomplete="off" required>
               <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
-              <button type="button" id="send-email">Send</button>
+              <button type="submit" id="send-email">Send</button>
             </form>
           </div>          
         </div>
@@ -318,7 +326,7 @@
 
     <!-- SmtpJS -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    
+
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
 
